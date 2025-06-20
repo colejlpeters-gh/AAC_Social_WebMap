@@ -1,0 +1,1 @@
+var json_EndstateIsochroneStartingPoint_16 = {"type":"FeatureCollection","name":"EndstateIsochroneStartingPoint_16","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"fid":"1","id":null,"name":"Starting point"},"geometry":{"type":"Point","coordinates":[44.41676338004752,40.219433385664566]}}]}
