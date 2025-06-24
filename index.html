@@ -3413,6 +3413,11 @@
         bounds_group.addLayer(layer_EarlychildhoodEducationDensity_50);
         map.addLayer(layer_EarlychildhoodEducationDensity_50);
         function pop_EarlychildhoodEducationPoints_51(feature, layer) {
+    // Fallback logic for RTPI Social Class field casing
+    const rtpiValue = feature.properties['RTPI Social Class'] !== null && feature.properties['RTPI Social Class'] !== undefined
+        ? feature.properties['RTPI Social Class']
+        : feature.properties['RTPI social class'];
+
     var popupContent = '<table>\
         <tr>\
             <td class="visible-with-data" id="Name" colspan="2"><strong>Name</strong><br />' + 
@@ -3422,7 +3427,7 @@
         <tr>\
             <th scope="row">RTPI Social Class</th>\
             <td class="visible-with-data" id="RTPI Social Class">' + 
-                (feature.properties['RTPI Social Class'] !== null ? autolinker.link(String(feature.properties['RTPI Social Class']).replace(/'/g, '\'').toLocaleString()) : '') + 
+                (rtpiValue !== null && rtpiValue !== undefined ? autolinker.link(String(rtpiValue).replace(/'/g, '\'').toLocaleString()) : '') + 
             '</td>\
         </tr>\
         <tr>\
