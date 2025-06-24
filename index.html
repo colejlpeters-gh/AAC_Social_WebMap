@@ -315,57 +315,31 @@
             style: style_Scrub_3_0,
         });
         bounds_group.addLayer(layer_Scrub_3);
-        function pop_Park_4(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['osm_id'] !== null ? autolinker.link(String(feature.properties['osm_id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['code'] !== null ? autolinker.link(String(feature.properties['code']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fclass'] !== null ? autolinker.link(String(feature.properties['fclass']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['name'] !== null ? autolinker.link(String(feature.properties['name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Source'] !== null ? autolinker.link(String(feature.properties['Source']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
         function style_Park_4_0() {
-            return {
-                pane: 'pane_Park_4',
-                stroke: false, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(168,176,161,1.0)',
-                interactive: true,
-            }
-        }
-        map.createPane('pane_Park_4');
-        map.getPane('pane_Park_4').style.zIndex = 404;
-        map.getPane('pane_Park_4').style['mix-blend-mode'] = 'normal';
-        var layer_Park_4 = new L.geoJson(json_Park_4, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_Park_4',
-            layerName: 'layer_Park_4',
-            pane: 'pane_Park_4',
-            onEachFeature: pop_Park_4,
-            style: style_Park_4_0,
-        });
-        bounds_group.addLayer(layer_Park_4);
+    return {
+        pane: 'pane_Park_4',
+        stroke: false, 
+        fill: true,
+        fillOpacity: 1,
+        fillColor: 'rgba(168,176,161,1.0)',
+        interactive: true,
+    }
+}
+
+map.createPane('pane_Park_4');
+map.getPane('pane_Park_4').style.zIndex = 404;
+map.getPane('pane_Park_4').style['mix-blend-mode'] = 'normal';
+
+var layer_Park_4 = new L.geoJson(json_Park_4, {
+    attribution: '',
+    interactive: true,
+    dataVar: 'json_Park_4',
+    layerName: 'layer_Park_4',
+    pane: 'pane_Park_4',
+    style: style_Park_4_0
+});
+
+bounds_group.addLayer(layer_Park_4);
         function pop_EndstateIsochrone_5(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
