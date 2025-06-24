@@ -3413,7 +3413,7 @@
         bounds_group.addLayer(layer_EarlychildhoodEducationDensity_50);
         map.addLayer(layer_EarlychildhoodEducationDensity_50);
         function pop_EarlychildhoodEducationPoints_51(feature, layer) {
-   	 var popupContent = '<table>\
+    var popupContent = '<table>\
         <tr>\
             <td class="visible-with-data" id="Name" colspan="2"><strong>Name</strong><br />' + 
                 (feature.properties['Name'] !== null ? autolinker.link(String(feature.properties['Name']).replace(/'/g, '\'').toLocaleString()) : '') + 
@@ -3422,7 +3422,7 @@
         <tr>\
             <th scope="row">RTPI Social Class</th>\
             <td class="visible-with-data" id="RTPI Social Class">' + 
-                (feature.properties['RTPI social class'] !== null ? autolinker.link(String(feature.properties['RTPI social class']).replace(/'/g, '\'').toLocaleString()) : '') + 
+                (feature.properties['RTPI Social Class'] !== null ? autolinker.link(String(feature.properties['RTPI Social Class']).replace(/'/g, '\'').toLocaleString()) : '') + 
             '</td>\
         </tr>\
         <tr>\
