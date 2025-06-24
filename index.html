@@ -2171,37 +2171,50 @@
         bounds_group.addLayer(layer_DefanseDevelopment_32);
         map.addLayer(layer_DefanseDevelopment_32);
         function pop_ReligiousandSpiritualPoints_33(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td class="visible-with-data" id="Name" colspan="2"><strong>Name</strong><br />' + (feature.properties['Name'] !== null ? autolinker.link(String(feature.properties['Name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">FSQ Level 1 Category</th>\
-                        <td class="visible-with-data" id="FSQ Level 1 Category">' + (feature.properties['FSQ Level 1 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 1 Category']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">FSQ Level 2 Category</th>\
-                        <td class="visible-with-data" id="FSQ Level 2 Category">' + (feature.properties['FSQ Level 2 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 2 Category']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">FSQ Level 3 Category</th>\
-                        <td class="visible-with-data" id="FSQ Level 3 Category">' + (feature.properties['FSQ Level 3 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 3 Category']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">RTPI Social Class</th>\
-                        <td class="visible-with-data" id="RTPI Social Class">' + (feature.properties['RTPI Social Class'] !== null ? autolinker.link(String(feature.properties['RTPI Social Class']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Source</th>\
-                        <td class="visible-with-data" id="Source">' + (feature.properties['Source'] !== null ? autolinker.link(String(feature.properties['Source']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
+    	var popupContent = '<table>\
+        <tr>\
+            <td class="visible-with-data" id="Name" colspan="2"><strong>Name</strong><br />' + 
+            (feature.properties['Name'] !== null ? autolinker.link(String(feature.properties['Name']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">RTPI Social Class</th>\
+            <td class="visible-with-data" id="RTPI Social Class">' + 
+            (feature.properties['RTPI Social Class'] !== null ? autolinker.link(String(feature.properties['RTPI Social Class']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">FSQ Level 1 Category</th>\
+            <td class="visible-with-data" id="FSQ Level 1 Category">' + 
+            (feature.properties['FSQ Level 1 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 1 Category']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">FSQ Level 2 Category</th>\
+            <td class="visible-with-data" id="FSQ Level 2 Category">' + 
+            (feature.properties['FSQ Level 2 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 2 Category']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">FSQ Level 3 Category</th>\
+            <td class="visible-with-data" id="FSQ Level 3 Category">' + 
+            (feature.properties['FSQ Level 3 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 3 Category']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">Source</th>\
+            <td class="visible-with-data" id="Source">' + 
+            (feature.properties['Source'] !== null ? autolinker.link(String(feature.properties['Source']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+    </table>';
+
+    var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+    layer.on('popupopen', function(e) {
+        addClassToPopupIfMedia(content, e.popup);
+    });
+    layer.bindPopup(content, { maxHeight: 400 });
+}
 
         function style_ReligiousandSpiritualPoints_33_0() {
             return {
@@ -2360,38 +2373,51 @@
             style: style_ResidentialAccomodationDensity_35_0,
         });
         bounds_group.addLayer(layer_ResidentialAccomodationDensity_35);
-        function pop_ResidentialAccomodationPoints_36(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td class="visible-with-data" id="Name" colspan="2"><strong>Name</strong><br />' + (feature.properties['Name'] !== null ? autolinker.link(String(feature.properties['Name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">FSQ Level 1 Category</th>\
-                        <td class="visible-with-data" id="FSQ Level 1 Category">' + (feature.properties['FSQ Level 1 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 1 Category']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">FSQ Level 2 Category</th>\
-                        <td class="visible-with-data" id="FSQ Level 2 Category">' + (feature.properties['FSQ Level 2 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 2 Category']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">FSQ Level 3 Category</th>\
-                        <td class="visible-with-data" id="FSQ Level 3 Category">' + (feature.properties['FSQ Level 3 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 3 Category']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">RTPI Social Class</th>\
-                        <td class="visible-with-data" id="RTPI Social Class">' + (feature.properties['RTPI Social Class'] !== null ? autolinker.link(String(feature.properties['RTPI Social Class']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Source</th>\
-                        <td class="visible-with-data" id="Source">' + (feature.properties['Source'] !== null ? autolinker.link(String(feature.properties['Source']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
+	function pop_ResidentialAccomodationPoints_36(feature, layer) {
+    	var popupContent = '<table>\
+        <tr>\
+            <td class="visible-with-data" id="Name" colspan="2"><strong>Name</strong><br />' + 
+            (feature.properties['Name'] !== null ? autolinker.link(String(feature.properties['Name']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">RTPI Social Class</th>\
+            <td class="visible-with-data" id="RTPI Social Class">' + 
+            (feature.properties['RTPI Social Class'] !== null ? autolinker.link(String(feature.properties['RTPI Social Class']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">FSQ Level 1 Category</th>\
+            <td class="visible-with-data" id="FSQ Level 1 Category">' + 
+            (feature.properties['FSQ Level 1 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 1 Category']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">FSQ Level 2 Category</th>\
+            <td class="visible-with-data" id="FSQ Level 2 Category">' + 
+            (feature.properties['FSQ Level 2 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 2 Category']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">FSQ Level 3 Category</th>\
+            <td class="visible-with-data" id="FSQ Level 3 Category">' + 
+            (feature.properties['FSQ Level 3 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 3 Category']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">Source</th>\
+            <td class="visible-with-data" id="Source">' + 
+            (feature.properties['Source'] !== null ? autolinker.link(String(feature.properties['Source']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+    </table>';
+
+    var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+    layer.on('popupopen', function(e) {
+        addClassToPopupIfMedia(content, e.popup);
+    });
+    layer.bindPopup(content, { maxHeight: 400 });
+}
 
         function style_ResidentialAccomodationPoints_36_0() {
             return {
@@ -2567,37 +2593,50 @@
         });
         bounds_group.addLayer(layer_CulturalRecreationspacesDensity_38);
         function pop_CulturalRecreationspacesPoints_39(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td class="visible-with-data" id="Name" colspan="2"><strong>Name</strong><br />' + (feature.properties['Name'] !== null ? autolinker.link(String(feature.properties['Name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">FSQ Level 1 Category</th>\
-                        <td class="visible-with-data" id="FSQ Level 1 Category">' + (feature.properties['FSQ Level 1 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 1 Category']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">FSQ Level 2 Category</th>\
-                        <td class="visible-with-data" id="FSQ Level 2 Category">' + (feature.properties['FSQ Level 2 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 2 Category']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">FSQ Level 3 Category</th>\
-                        <td class="visible-with-data" id="FSQ Level 3 Category">' + (feature.properties['FSQ Level 3 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 3 Category']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">RTPI Social Class</th>\
-                        <td class="visible-with-data" id="RTPI Social Class">' + (feature.properties['RTPI Social Class'] !== null ? autolinker.link(String(feature.properties['RTPI Social Class']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Source</th>\
-                        <td class="visible-with-data" id="Source">' + (feature.properties['Source'] !== null ? autolinker.link(String(feature.properties['Source']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
+    	var popupContent = '<table>\
+        <tr>\
+            <td class="visible-with-data" id="Name" colspan="2"><strong>Name</strong><br />' + 
+            (feature.properties['Name'] !== null ? autolinker.link(String(feature.properties['Name']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">RTPI Social Class</th>\
+            <td class="visible-with-data" id="RTPI Social Class">' + 
+            (feature.properties['RTPI Social Class'] !== null ? autolinker.link(String(feature.properties['RTPI Social Class']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">FSQ Level 1 Category</th>\
+            <td class="visible-with-data" id="FSQ Level 1 Category">' + 
+            (feature.properties['FSQ Level 1 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 1 Category']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">FSQ Level 2 Category</th>\
+            <td class="visible-with-data" id="FSQ Level 2 Category">' + 
+            (feature.properties['FSQ Level 2 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 2 Category']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">FSQ Level 3 Category</th>\
+            <td class="visible-with-data" id="FSQ Level 3 Category">' + 
+            (feature.properties['FSQ Level 3 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 3 Category']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">Source</th>\
+            <td class="visible-with-data" id="Source">' + 
+            (feature.properties['Source'] !== null ? autolinker.link(String(feature.properties['Source']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+    </table>';
+
+    var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+    layer.on('popupopen', function(e) {
+        addClassToPopupIfMedia(content, e.popup);
+    });
+    layer.bindPopup(content, { maxHeight: 400 });
+}
 
         function style_CulturalRecreationspacesPoints_39_0() {
             return {
@@ -2757,37 +2796,50 @@
         });
         bounds_group.addLayer(layer_PublicservicesDensity_41);
         function pop_PublicservicesPoints_42(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td class="visible-with-data" id="Name" colspan="2"><strong>Name</strong><br />' + (feature.properties['Name'] !== null ? autolinker.link(String(feature.properties['Name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">FSQ Level 1 Category</th>\
-                        <td class="visible-with-data" id="FSQ Level 1 Category">' + (feature.properties['FSQ Level 1 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 1 Category']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">FSQ Level 2 Category</th>\
-                        <td class="visible-with-data" id="FSQ Level 2 Category">' + (feature.properties['FSQ Level 2 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 2 Category']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">FSQ Level 3 Category</th>\
-                        <td class="visible-with-data" id="FSQ Level 3 Category">' + (feature.properties['FSQ Level 3 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 3 Category']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">RTPI Social Class</th>\
-                        <td class="visible-with-data" id="RTPI Social Class">' + (feature.properties['RTPI Social Class'] !== null ? autolinker.link(String(feature.properties['RTPI Social Class']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Source</th>\
-                        <td class="visible-with-data" id="Source">' + (feature.properties['Source'] !== null ? autolinker.link(String(feature.properties['Source']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
+    	var popupContent = '<table>\
+        <tr>\
+            <td class="visible-with-data" id="Name" colspan="2"><strong>Name</strong><br />' + 
+            (feature.properties['Name'] !== null ? autolinker.link(String(feature.properties['Name']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">RTPI Social Class</th>\
+            <td class="visible-with-data" id="RTPI Social Class">' + 
+            (feature.properties['RTPI Social Class'] !== null ? autolinker.link(String(feature.properties['RTPI Social Class']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">FSQ Level 1 Category</th>\
+            <td class="visible-with-data" id="FSQ Level 1 Category">' + 
+            (feature.properties['FSQ Level 1 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 1 Category']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">FSQ Level 2 Category</th>\
+            <td class="visible-with-data" id="FSQ Level 2 Category">' + 
+            (feature.properties['FSQ Level 2 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 2 Category']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">FSQ Level 3 Category</th>\
+            <td class="visible-with-data" id="FSQ Level 3 Category">' + 
+            (feature.properties['FSQ Level 3 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 3 Category']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">Source</th>\
+            <td class="visible-with-data" id="Source">' + 
+            (feature.properties['Source'] !== null ? autolinker.link(String(feature.properties['Source']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+    </table>';
+
+    var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+    layer.on('popupopen', function(e) {
+        addClassToPopupIfMedia(content, e.popup);
+    });
+    layer.bindPopup(content, { maxHeight: 400 });
+}
 
         function style_PublicservicesPoints_42_0() {
             return {
@@ -2947,41 +2999,56 @@
         });
         bounds_group.addLayer(layer_HealthwellbeingDensity_44);
         function pop_HealthwellbeingPoints_45(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td class="visible-with-data" id="Name" colspan="2"><strong>Name</strong><br />' + (feature.properties['Name'] !== null ? autolinker.link(String(feature.properties['Name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">FSQ Level 1 Category</th>\
-                        <td class="visible-with-data" id="FSQ Level 1 Category">' + (feature.properties['FSQ Level 1 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 1 Category']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">FSQ Level 2 Category</th>\
-                        <td class="visible-with-data" id="FSQ Level 2 Category">' + (feature.properties['FSQ Level 2 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 2 Category']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">FSQ Level 3 Category</th>\
-                        <td class="visible-with-data" id="FSQ Level 3 Category">' + (feature.properties['FSQ Level 3 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 3 Category']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">RTPI Social Class</th>\
-                        <td class="visible-with-data" id="RTPI Social Class">' + (feature.properties['RTPI Social Class'] !== null ? autolinker.link(String(feature.properties['RTPI Social Class']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Source</th>\
-                        <td class="visible-with-data" id="Source">' + (feature.properties['Source'] !== null ? autolinker.link(String(feature.properties['Source']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">OSM Fclass</th>\
-                        <td class="visible-with-data" id="OSM Fclass">' + (feature.properties['OSM Fclass'] !== null ? autolinker.link(String(feature.properties['OSM Fclass']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
+    	var popupContent = '<table>\
+        <tr>\
+            <td class="visible-with-data" id="Name" colspan="2"><strong>Name</strong><br />' + 
+            (feature.properties['Name'] !== null ? autolinker.link(String(feature.properties['Name']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">RTPI Social Class</th>\
+            <td class="visible-with-data" id="RTPI Social Class">' + 
+            (feature.properties['RTPI Social Class'] !== null ? autolinker.link(String(feature.properties['RTPI Social Class']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">FSQ Level 1 Category</th>\
+            <td class="visible-with-data" id="FSQ Level 1 Category">' + 
+            (feature.properties['FSQ Level 1 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 1 Category']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">FSQ Level 2 Category</th>\
+            <td class="visible-with-data" id="FSQ Level 2 Category">' + 
+            (feature.properties['FSQ Level 2 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 2 Category']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">FSQ Level 3 Category</th>\
+            <td class="visible-with-data" id="FSQ Level 3 Category">' + 
+            (feature.properties['FSQ Level 3 Category'] !== null ? autolinker.link(String(feature.properties['FSQ Level 3 Category']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">OSM Fclass</th>\
+            <td class="visible-with-data" id="OSM Fclass">' + 
+            (feature.properties['OSM Fclass'] !== null ? autolinker.link(String(feature.properties['OSM Fclass']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+        <tr>\
+            <th scope="row">Source</th>\
+            <td class="visible-with-data" id="Source">' + 
+            (feature.properties['Source'] !== null ? autolinker.link(String(feature.properties['Source']).replace(/'/g, '\'').toLocaleString()) : '') + 
+        '</td>\
+        </tr>\
+    </table>';
+
+    var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+    layer.on('popupopen', function(e) {
+        addClassToPopupIfMedia(content, e.popup);
+    });
+    layer.bindPopup(content, { maxHeight: 400 });
+}
 
         function style_HealthwellbeingPoints_45_0() {
             return {
